@@ -1,11 +1,11 @@
 import { readdirSync, writeFileSync } from "fs";
 import { join } from "path";
 
-const clientDir = "dist/client";
+const clientDir = "dist";
 const assets = readdirSync(join(clientDir, "assets"));
 
-const js = assets.find((f) => f.endsWith(".js") && f.startsWith("index"));
-const css = assets.find((f) => f.endsWith(".css"));
+const js = assets.find((f) => f.endsWith(".js") && f.startsWith("entry-client"));
+const css = assets.find((f) => f.endsWith(".css") && f.startsWith("entry-client"));
 
 const html = `<!doctype html>
 <html lang="en">
@@ -23,4 +23,4 @@ const html = `<!doctype html>
 </html>`;
 
 writeFileSync(join(clientDir, "index.html"), html);
-console.log("✅ index.html generated in dist/client");
+console.log("✅ index.html generated in dist/");

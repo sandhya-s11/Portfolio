@@ -15,30 +15,6 @@ import { Footer } from "@/components/portfolio/Footer";
 import { ScrollUtils } from "@/components/portfolio/ScrollUtils";
 
 export const Route = createFileRoute("/")({
-  head: () => ({
-    meta: [
-      { title: "Sandhya — Computer Science & Business Systems Student" },
-      {
-        name: "description",
-        content:
-          "Personal portfolio of Sandhya — CSBS student, software developer, and AI enthusiast building practical software through modern technologies.",
-      },
-      { property: "og:title", content: "Sandhya — Software Developer & AI Enthusiast" },
-      {
-        property: "og:description",
-        content: "Portfolio showcasing projects, skills, and certifications.",
-      },
-      { property: "og:type", content: "website" },
-      { property: "og:url", content: "/" },
-    ],
-    links: [
-      { rel: "canonical", href: "/" },
-      {
-        rel: "stylesheet",
-        href: "https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@500;600;700;800&display=swap",
-      },
-    ],
-  }),
   component: Index,
 });
 
